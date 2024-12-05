@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Literacy for Young Adults</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #005f99;
+      color: #fff;
+      padding: 15px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #007acc;
+    }
+    nav button {
+      padding: 15px 20px;
+      border: none;
+      background: none;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+    }
+    nav button:hover, nav button.active {
+      border-bottom: 3px solid #fff;
+    }
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .tab-content {
+      display: none;
+      max-width: 800px;
+      width: 100%;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    h2 {
+      color: #005f99;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      background: #e8f4fd;
+      padding: 10px 15px;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+    iframe {
+      margin: 20px 0;
+      width: 100%;
+      height: 500px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #005f99;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Financial Literacy for Young Adults</h1>
+  </header>
+  <nav>
+    <button onclick="showTab(0)" class="active">What is Financial Literacy?</button>
+    <button onclick="showTab(1)">Key Concepts</button>
+    <button onclick="showTab(2)">FAQ</button>
+    <button onclick="showTab(3)">Interactive Chatbot</button>
+  </nav>
+  <div class="container">
+    <div id="tab-0" class="tab-content active">
+      <h2>What is Financial Literacy?</h2>
+      <p>Financial literacy is the ability to understand and use various financial skills effectively. This includes personal financial management, budgeting, saving, investing, and understanding credit and debt management.</p>
+      <p>Being financially literate empowers individuals to make informed financial decisions, avoid debt, and achieve financial stability.</p>
+    </div>
+    <div id="tab-1" class="tab-content">
+      <h2>Key Concepts of Financial Literacy</h2>
+      <ul>
+        <li><strong>Budgeting:</strong> A plan for managing income and expenses.</li>
+        <li><strong>Saving:</strong> Setting aside money for future needs or emergencies.</li>
+        <li><strong>Investing:</strong> Growing wealth by allocating resources to assets like stocks or real estate.</li>
+        <li><strong>Debt Management:</strong> Strategies to handle and reduce debt responsibly.</li>
+        <li><strong>Credit Score:</strong> A metric that determines your creditworthiness for lenders.</li>
+        <li><strong>Retirement Planning:</strong> Preparing financially for life after work.</li>
+      </ul>
+    </div>
+    <div id="tab-2" class="tab-content">
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <ul>
+        <li><strong>What is a credit score?</strong><br>A credit score is a number that reflects your creditworthiness and affects your ability to borrow money.</li>
+        <li><strong>Why is financial literacy important?</strong><br>It helps you make informed decisions, avoid debt, and build wealth over time.</li>
+        <li><strong>How can I start saving?</strong><br>Begin by setting aside a portion of your income and reducing unnecessary expenses.</li>
+        <li><strong>What is the difference between saving and investing?</strong><br>Saving is for short-term goals or emergencies, while investing is for long-term wealth growth.</li>
+        <li><strong>How do I create a budget?</strong><br>Track your income and expenses, then allocate funds for essentials, savings, and discretionary spending.</li>
+      </ul>
+    </div>
+    <div id="tab-3" class="tab-content">
+      <h2>Interactive Chatbot</h2>
+      <iframe id="embed-preview-iframe" loading="eager" src="https://embed.pickaxeproject.com/axe?id=Financial_Filips_G7YB7&mode=embed_gold&host=beta&theme=light&opacity=100&font_header=Real+Head+Pro&size_header=30&font_body=Real+Head+Pro&size_body=16&font_labels=Real+Head+Pro&size_labels=14&font_button=Real+Head+Pro&size_button=16&c_fb=FFFFFF&c_ff=FFFFFF&c_fbd=888888&c_rb=FFFFFF&c_bb=228DD7&c_bt=FFFFFF&c_t=000000&s_ffo=100&s_rbo=100&s_bbo=100&s_f=minimalist&s_b=filled&s_t=1&s_to=1&s_r=2"></iframe>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2024 Financial Literacy for Young Adults</p>
+  </footer>
+  <script>
+    function showTab(index) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('nav button');
+      
+      tabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+      });
+      buttons.forEach((button, i) => {
+        button.classList.toggle('active', i === index);
+      });
+    }
+  </script>
+</body>
+</html>
